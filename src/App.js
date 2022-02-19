@@ -1,31 +1,14 @@
 import './App.css';
-import Footer from './components/footer'
+import ItemListContainer from './components/container/ItemListContainer';
+import NavBar from './components/NavBar';
 
-function App() {
-
-  const mensajeBienvenida = 'Bienvenidos a React!!'
-
-  const stylesLi = {
-    color: 'red'
-  }
-
-  const alertMsg = () => { alert('Hola') }
-
+const App = () => {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <h1>{mensajeBienvenida}</h1>
-      <ul>
-        <li style={stylesLi}>React</li>
-        <li>JSX</li>
-        <li>Webpack</li>
-      </ul>
-      <Footer name="Ana" action={alertMsg}>
-        <h3>Mi children</h3>
-        <h4>Otro children</h4>
-      </Footer>
-    </div>
-  );
+    <>
+      <NavBar></NavBar>
+      <ItemListContainer saludo="Hola"></ItemListContainer>
+    </>
+  )
 }
 
-export default App;
+export default App
