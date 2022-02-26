@@ -1,7 +1,12 @@
 import React from 'react'
+import ItemList from '../ItemList'
 
 const ItemListContainer = (props) => {
-  return <h1 className="text-3xl font-bold underline">{props.saludo}</h1>;
+  return (
+    <div className="mx-72 p-14">
+      <ItemList></ItemList>
+    </div>
+  );
 }
 
-export default ItemListContainer
+export default ItemListContainer;
