@@ -9,7 +9,12 @@ const navBar = () => {
         <h1 className="text-3xl pl-8">Marchecommerce</h1>
       </Link>
       <div className="flex pr-8">
-        <a className="pr-4" href="#">Inicio</a>
+        <Link to={`/categoria/buzos`}>
+          <p className="pr-4">Buzos</p>
+        </Link>
+        <Link to={`/categoria/remeras`}>
+          <p className="pr-4" href="#">Remeras</p>
+        </Link>
         <a className="pr-4" href="#">Contacto</a>
         <a className="pr-4" href="#">Nosotros</a>
         <CartWidget></CartWidget>

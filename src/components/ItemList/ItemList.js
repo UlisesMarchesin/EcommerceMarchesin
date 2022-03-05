@@ -4,13 +4,13 @@ import Item from '../Item/Item'
 
 
 
-const ItemList = () => {
+const ItemList = ( {category} ) => {
 
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-    getProducts(setProducts);
-  }, []);
+    getProducts(setProducts, category);
+  }, [category]);
 
   return (
     <section className="flex flex-wrap justify-center gap-16">

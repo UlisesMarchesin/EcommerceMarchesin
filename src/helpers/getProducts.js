@@ -1,10 +1,14 @@
-const url = "https://run.mocky.io/v3/8d8e0a98-13d6-48b5-9576-ff372c7a0e53";
+const url = "https://run.mocky.io/v3/a288552b-8535-428b-80c5-606fddbbbb9a";
 
-export const getProducts = async (setState) => {
+export const getProducts = async (setState, category) => {
   try {
     const resp = await fetch(url);
     const data = await resp.json();
-    setState(data);
+    if(category){
+      setState(data.filter( p => p.category === category))
+    }else{
+      setState(data);
+    }
   } catch (error) {
     console.log(error);
   }
@@ -21,5 +25,3 @@ export const getProductsById = async (id, setState) => {
     console.log(error);
   }
 }
-
-
