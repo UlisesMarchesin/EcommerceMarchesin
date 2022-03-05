@@ -1,7 +1,7 @@
 import React from 'react'
-import ItemList from '../ItemList'
+import ItemList from '../ItemList/ItemList'
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
   return (
     <div className="mx-72 p-14">
       <ItemList></ItemList>
