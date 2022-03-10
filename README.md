@@ -15,7 +15,7 @@ Elegí utilizar esta herramienta porque me permite aplicar estilos de una manera
 ### `npm start`
 
 Ejecuta la aplicación en el modo de desarrollo.\
-Abra [http://localhost:3000](http://localhost:3000) para verlo en su navegador.\
+Abra [http://localhost:3000](http://localhost:3000) para verlo en su navegador.
 
 
 La página se volverá a cargar cuando realice cambios.
