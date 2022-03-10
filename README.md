@@ -5,7 +5,7 @@ Marchecommerce es un proyecto para el curso de React de CoderHouse, la propuesta
 **Ver demo en:** https://recordit.co/wQSFtl5uRd
 
 ## Dependencias y Documentacion
-React Js: https://reactjs.org/
+React Js: https://reactjs.org/ .\
 React Router DOM: https://reactrouter.com/web/guides/quick-start
 
 
@@ -15,7 +15,8 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ejecuta la aplicación en el modo de desarrollo.\
+Abra [http://localhost:3000](http://localhost:3000) para verlo en su navegador.\
 
 
+La página se volverá a cargar cuando realice cambios.
