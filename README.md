@@ -5,13 +5,12 @@ Marchecommerce es un proyecto para el curso de React de CoderHouse, la propuesta
 **Ver demo en:** https://recordit.co/wQSFtl5uRd
 
 ## Dependencias y Documentacion
-React Js: https://reactjs.org/ .\
+React Js: https://reactjs.org/ \
 React Router DOM: https://reactrouter.com/web/guides/quick-start
 
+### Tailwind CSS: https://tailwindcss.com/
+Elegí utilizar esta herramienta porque me permite aplicar estilos de una manera ágil y optimizada.
 
-## Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
 
