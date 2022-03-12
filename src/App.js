@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
 import { CartContextProvider } from "./components/Context/CartContext";
 import NavBar from './components/NavBar/NavBar';
+import CartPage from "./pages/CartPage";
 import DetailPage from "./pages/DetailPage";
 import ProductsPage from "./pages/ProductsPage";
 
@@ -17,6 +18,7 @@ const App = () => {
             <Route path=":category" element={<ProductsPage />} />
           </Route>
           <Route path="/product/:id" element={<DetailPage />} />
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
       </Router>
     </CartContextProvider>
