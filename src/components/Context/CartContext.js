@@ -25,7 +25,7 @@ export function CartContextProvider({ children }) {
     }
 
     function isItemInCart(id){
-       return itemsCart.some(e => e.id === id)
+       return itemsCart.some(e => e.id === id) 
     }
 
     function getItemInCart(id){
