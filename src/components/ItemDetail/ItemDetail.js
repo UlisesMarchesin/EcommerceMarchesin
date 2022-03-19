@@ -7,7 +7,7 @@ const ItemDetail = ({product}) => {
 
   let stock = product.stock;
 
-  const { addItem, clearCart, removeItem, getItemInCart } = useContext(CartContext);
+  const { addItem, getItemInCart } = useContext(CartContext);
 
   const [ isInCart, setIsInCart ] = useState(false)
 
@@ -24,10 +24,6 @@ const ItemDetail = ({product}) => {
   const twStyles = {
     button:
       "mt-8 bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded",
-    buttonRemove:
-      "mt-8 bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded ml-5",
-    buttonClear:
-      "mt-8 bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded",
   };
 
   return (
@@ -46,17 +42,6 @@ const ItemDetail = ({product}) => {
         ) : (
           <ItemCount addToCart={addToCart} stock={stock} />
         )}
-        <div>
-          <button onClick={clearCart} className={twStyles.buttonClear}>
-            Vaciar carrito
-          </button>
-          <button
-            onClick={() => removeItem(product)}
-            className={twStyles.buttonRemove}
-          >
-            Eliminar producto
-          </button>
-        </div>
       </div>
     </article>
   );
