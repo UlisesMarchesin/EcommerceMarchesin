@@ -1,13 +1,24 @@
-const url = "https://run.mocky.io/v3/a288552b-8535-428b-80c5-606fddbbbb9a";
+import { collection, getDocs } from "firebase/firestore";
+import db from "../firebase/firebaseConfig";
+
 
 export const getProducts = async (setState, category) => {
+
+  const querySnapshot = await getDocs(collection(db, "items"));
+  
+  const listProducts = [];
+  querySnapshot.forEach((doc) => {
+    const data = doc.data();
+    listProducts.push(data);
+  });
   try {
-    const resp = await fetch(url);
-    const data = await resp.json();
-    if(category){
-      setState(data.filter( p => p.category === category))
-    }else{
-      setState(data);
+    if (category) {
+      let productsFilters = listProducts.filter(
+        (p) => p.category === category
+      );
+      setState(productsFilters);
+    } else {
+      setState(listProducts);
     }
   } catch (error) {
     console.log(error);
@@ -15,10 +26,14 @@ export const getProducts = async (setState, category) => {
 };
 
 export const getProductsById = async (id, setState) => {
+  const querySnapshot = await getDocs(collection(db, "items"));
+  const listId = [];
+  querySnapshot.forEach((doc) => {
+    const data = doc.data();
+    listId.push(data);
+  });
   try{
-    const resp = await fetch(url);
-    const data = await resp.json();
-    const product = data.find( el => el.id == id);
+    const product = listId.find((el) => el.id == id);
     setState(product);
 
   }catch(error){
