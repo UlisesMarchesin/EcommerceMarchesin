@@ -4,6 +4,7 @@ import { CartContextProvider } from "./components/Context/CartContext";
 import NavBar from './components/NavBar/NavBar';
 import CartPage from "./pages/CartPage";
 import DetailPage from "./pages/DetailPage";
+import FormPage from "./pages/FormPage";
 import ProductsPage from "./pages/ProductsPage";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           </Route>
           <Route path="/product/:id" element={<DetailPage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/form" element={<FormPage />} />
         </Routes>
       </Router>
     </CartContextProvider>

@@ -2,7 +2,7 @@
 
 Marchecommerce es un proyecto para el curso de React de CoderHouse, la propuesta busca desarrollar una plataforma ecommerce en la que se aplique todos los conocimientos que vaya adquiriendo a lo largo del curso.
 
-**Ver demo en:** https://recordit.co/1yOTvl8ioy
+**Ver demo en:** https://recordit.co/SWMMom6L5i
 
 ## Dependencias y Documentacion
 React Js: https://reactjs.org/ \
